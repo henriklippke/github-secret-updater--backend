@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('server is running...');
+});
+
 app.post('/access-token', async (req, res) => {
   const clientId = process.env.CLIENT_ID
   const clientSecret = process.env.CLIENT_SECRET
