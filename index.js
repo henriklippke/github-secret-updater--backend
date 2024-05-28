@@ -15,7 +15,7 @@ const clientSecret = process.env.CLIENT_SECRET
 const oAuthApp = new OAuthApp({
   clientId,
   clientSecret,
-  defaultScopes: ["repo", "user", "project", "admin:org"]
+  defaultScopes: ['repo', 'gist', 'user', 'project', 'admin:org', 'orgs']
 });
 
 app.get('/', (req, res) => {
