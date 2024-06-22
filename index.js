@@ -36,7 +36,7 @@ app.post('/access-token', async (req, res) => {
 app.post('/logout', async (req, res) => {
   const { accessToken } = req.body
   try {
-    const token = await oAuthApp.deleteToken({ token: accessToken })
+    const token = await oAuthApp.deleteAuthorization({ token: accessToken })
     res.json(token)
   } catch (error) {
     res.json(error)
